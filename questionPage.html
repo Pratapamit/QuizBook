@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Questions</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		img{
+			width: 6%;
+			height: auto;
+			margin-top: 2%;
+			margin-left: 6%;
+		}
+		.hedding{
+			text-align: center;
+			margin-top: -3.7%;
+			font-size: 2vw;
+		}
+		hr{
+			position: relative;
+			top: 30px;
+		}
+		.section1,.section2{
+			border: 1px solid black;
+			width: 50%;
+			height: auto;
+			margin-left: 25%;
+			margin-top: 80px;
+			font-size: 1vw;
+		}
+		.section1>h2,.section2>h2{
+			margin: 0;	
+			background-color:#425ced;	
+			font-size: 1vw;	
+			color: white;
+			padding: 10px;
+		}
+		.section1>ol>li{
+			color:#425ced;	
+			padding: 2px;
+			font-size: 1vw;
+		}
+		#startBtn,#pre,#next{
+			background-color: #3aad34;
+			color: white;
+			padding: 6px;
+			border: none;
+			border-radius: 2px;
+			margin-left: 1%;
+			font-size: 1vw;
+		}
+		#startBtn:hover,#pre:hover,#next:hover{
+			background-color: #308f2b;
+			color: white;
+		}
+
+		#div,#div2{
+			padding: 2%;
+			background-color: #e3e3e3;
+		}
+		.section2{
+			display: none;
+		}
+		.section2>form{
+			padding: 10px;
+			line-height: 25px;
+			font-size: 1vw;
+		}
+		
+		.lastSection{
+			width: 60%;
+			height: auto;
+			margin-left: 20%;
+			margin-top: 80px;
+			display: none;
+		}
+		.lastSection>div:first-child>h1{
+			margin: 0;	
+			background-color:#eba7c5;	
+			font-size: 2vw;	
+			color: #a11352;
+			text-align: center;
+		}
+		.lastSection>div:first-child>h1:first-child{
+			padding-top: 15px;
+			padding-bottom: 10px;
+		}
+		.lastSection>div:first-child>h2{
+			text-align: center;
+			line-height: 15px;
+			font-size: 1.3vw;
+		}
+		.lastSection>div:first-child>p{
+			background-color: #ebebeb;
+			color: black;
+			padding: 15px;
+			font-size: 1.3vw;
+		}
+		.lastSection>div:first-child{
+			border: 1px solid gray;
+		}
+		#ansPara{
+			padding-left: 2%;
+			padding-bottom: 2%;
+			font-size: 1.2vw;
+			font-weight: bold;
+		}
+
+		@media only screen and (orientation:portrait){
+			img{
+			width: 10%;
+			height: auto;
+		}
+		.hedding{
+			font-size: 3.5vw;
+			margin-top: -6.5%;
+		}
+		.section1,.section2{
+			width: 70%;
+			height: auto;
+			margin-left: 15%;
+		}
+		.section1>h2,.section2>h2{
+			font-size: 2.2vw;	
+		}
+		.section1>ol>li{
+			font-size: 2vw;
+		}
+		#startBtn,#pre,#next{
+			font-size: 2vw;
+		}
+		#div>label{
+			font-size: 2vw;
+		}
+		.section2>form{
+			font-size: 2.2vw;
+		}
+		.lastSection{
+			width: 70%;
+			height: auto;
+			margin-left: 15%;			
+		}
+		.lastSection>div:first-child>h1{
+			font-size: 4vw;	
+		}
+		.lastSection>div:first-child>h2{
+			font-size: 2.5vw;
+		}
+		.lastSection>div:first-child>p{
+			font-size: 2.5vw;
+		}
+		#ansPara{
+			font-size: 2.2vw;
+		}
+		}
+
+	</style>
+</head>
+<body>
+<a href="index.html"><img src="Images/scholar.jpg"></a>
+	<h1 class="hedding">Alpha Quiz System</h1><hr>
+
+	<section class="section1">
+		<h2>User Login</h2>
+		<ol>
+			<li>Quiz will contain total 20 questions.</li>
+			<li>One point will be awarded for each correct answer.</li>
+			<li>No half marks will be awarded.</li>
+			<li>Each question has 4 options.</li>
+			<li>Do not refresh the page.</li>
+			<li>Final score will be shown after the submission of the quiz.</li>
+			<li>Do not move out of the quiz window else your quiz will be auto submitted.</li>
+		</ol>
+		<div id="div">
+			<input type="checkbox" name="" id="agree"><label for="agree">I Agree</label>
+			<button id="startBtn">Start Quiz</button>
+		</div>
+	</section>
+
+
+	<section class="section2">
+		<h2 id="ques">Q1. In 2009 Indian Premier League who got the title of Player of the series?</h2>
+		<form id="form">
+		<input type="radio" name="cricketers" value="Adam Gilchrist" id="one"><label for="one">Adam Gilchrist</label><br>
+		<input type="radio" name="cricketers" value="Sachin Tendulkar" id="two"><label for="two">Sachin Tendulkar</label><br>
+		<input type="radio" name="cricketers" value="Robin Uthappa" id="three"><label for="three">Robin Uthappa</label><br>
+		<input type="radio" name="cricketers" value="Shane Watson" id="four"><label for="four">Shane Watson</label><br>
+        </form>
+        <p id="ansPara"></p>
+		<div id="div2">
+			<button id="pre">Previous</button>
+			<button id="next">Next</button>
+		</div>
+	</section>
+
+	<section class="lastSection">
+		<div>
+			<h1 id="percentage"></h1>
+			<h2>Total number of Questions : <span id="totalQuestions"></span></h2>
+			<h2>Total number of Correct Answer : <span id="correct"></span></h2>
+			<h2>Total number of Wrong Answer : <span id="wrong"></span></h2>
+			<p id="result">Oppss !! You need Serious Improvement</p>
+		</div>
+	</section>
+
+	<script>
+		var questionList=[
+	{
+	 queno:1,
+	 que:"Q1. In 2009 Indian Premier League who got the title ofPlayer of the series?",
+	 ans:"Adam Gilchrist",
+	 options:[ "Adam Gilchrist", "Sachin Tendulkar", "Robin Uthappa", "Shane Watson" ]
+ },
+ {
+	 queno:2,
+	 que:"Q2. Which team won the IPL (2009)?",
+	 ans:"Deccan Chargers",
+	 options:[ "Deccan Chargers", "Chennai Super Kings", "Kolkata Knight Riders", "Delhi Daredevils" ]
+ },
+{
+	 queno:3,
+	 que:"Q3. Which player scored most runs in IPL (2009)?",
+	 ans:"Sachin Tendulkar",
+	 options:[ "Sanath Jaysuriya", "Sachin Tendulkar", "Matthew Hayden", "Virender Sehwag" ]
+ },
+{
+	 queno:4,
+	 que:"Q4. Which cricketer has bowled the most number of dot balls in the IPL?",
+	 ans:"Praveen Kumar",
+	 options:[ "Praveen Kumar", "Lasith Malinga", "Harbhajan Singh", "Sunil Narine" ]
+ },
+ {
+	 queno:5,
+	 que:"Q5. Which company replaced DLF as the new title sponsor in 2013 IPL?",
+	 ans:"PepsiCo",
+	 options:[ "PepsiCo", "Hindustan Unilever", "Nokia", "Patanjali" ]
+ },
+ {
+	 queno:6,
+	 que:"Q6. Which International star performed in the opening ceremony of 2013 IPL?",
+	 ans:"Pitbull",
+	 options:[ "Jennifer Lopez", "Akon", "Pitbull", "None of the above" ]
+ },
+{
+	 queno:7,
+	 que:"Q7. Which team won the 2014 Indian Premier League tournament?",
+	 ans:"Kolkata Knight Riders",
+	 options:[ "Kolkata Knight Riders", "Chennai Super Kings", "Deccan Chargers", "Royal Challengers Bangalore" ]
+ },
+ {
+	 queno:8,
+	 que:"Q8. Which team won Indian Premier League 2010?",
+	 ans:"Chennai Super Kings",
+	 options:[ "Chennai Super Kings", "Kolkata Knight Riders", "Deccan Chargers", "Delhi Daredevils" ]
+ },
+{
+	 queno:9,
+	 que:"Q9. Who hit the first century of IPL 2012?",
+	 ans:"Ajinkya Rahane",
+	 options:[ "Adam Gilchrist", "Ajinkya Rahane", "Virat Kohli", "Ambati Rayudu" ]
+ },
+ {
+	 queno:10,
+	 que:"Q10. Who holds the infamous record of most number of ducks in IPL 2012?",
+	 ans:"Manish Pandey",
+	 options:[ "Manish Pandey", "Munaf Patel", "Morne Morkel", "None of the above" ]
+ },
+ {
+	 queno:11,
+	 que:"Q11. Who hit the longest six in fifth edition of IPL?",
+	 ans:"MS Dhoni",
+	 options:[ "MS Dhoni", "Chris Gayle", "Yusuf Pathan", "Ajinkya Rahane" ]
+ },
+ {
+	 queno:12,
+	 que:"Q12. Which team won the IPL (2013)?",
+	 ans:"Mumbai Indians",
+	 options:[ "Mumbai Indians", "Kolkata Knight Riders", "Royal Challengers Bangalore", "Delhi Daredevils" ]
+ },
+{
+	 queno:13,
+	 que:"Q13. In IPL 2010, who was the most Fan-Friendly Cricketer?",
+	 ans:"Adam Gilchrist",
+	 options:[ "Adam Gilchrist", "Virat Kohli", "Rohit Sharma", "Lasith Malinga" ]
+ },
+ {
+	 queno:14,
+	 que:"Q14. In IPL 2010, who gave the best Debut Performance?",
+	 ans:"Kieron Pollard",
+	 options:[ "Kieron Pollard", "Yusuf Pathan", "Praveen Tambe", "Ambati Rayudu" ]
+ },
+ {
+	 queno:15,
+	 que:"Q15. Which cricketer has taken most catches in ODI cricket?",
+	 ans:"Mahela Jayawardene",
+	 options:[ "Ricky Ponting", "Mahela Jayawardene", "Jacques Kallis", "Mark Waugh" ]
+ },
+ {
+	 queno:16,
+	 que:"Q16. Which cricketer had scored fastest century in ODI cricket?",
+	 ans:"AB de Villiers",
+	 options:[ "Vivian Richards", "Corey Anderson", "Shahid Afridi", "AB de Villiers" ]
+ },
+ {
+	 queno:17,
+	 que:"Q17. Which cricketer had scored most centuries in first-class cricket?",
+	 ans:"Jack Hobbs",
+	 options:[ "Lane Hutton", "Wally Hammond", "Jack Hobbs", "Sachin Tendulkar" ]
+ },
+ {
+	 queno:18,
+	 que:"Q18. Which cricketer had scored highest individual score in ODI cricket?",
+	 ans:"Rohit Sharma",
+	 options:[ " Virender Sehwag", "Chris Gayle", "Martin Guptill", "Rohit Sharma" ]
+ },
+ {
+	 queno:19,
+	 que:"Q19. Which cricketer had scored highest individual score in first-class cricket?",
+	 ans:"Brian Lara",
+	 options:[ "Don Bradman", "Brian Lara", "Lane Hutton", "Gary Sobers" ]
+ },
+ {
+	 queno:20,
+	 que:"Q20. Which cricketers have recorded more than 100 sixes in Test cricket?",
+	 ans:"Brendon McCullum and Adam Gilchrist",
+	 options:[ "Brendon McCullum and Chris Cranes", "Brendon McCullum and Jacques Kallis", "Brendon McCullum and Chris Gayle", "Brendon McCullum and Adam Gilchrist" ]
+ },
+  {
+	 queno:21,
+	 que:"Q20. Which cricketers have recorded more than 100 sixes in Test cricket?",
+	 ans:"Brendon McCullum and Adam Gilchrist",
+	 options:[ "Brendon McCullum and Chris Cranes", "Brendon McCullum and Jacques Kallis", "Brendon McCullum and Chris Gayle", "Brendon McCullum and Adam Gilchrist" ]
+ }
+ ];
+		
+		document.getElementById("startBtn").addEventListener("click",start);
+
+		function start() {
+			var a=document.getElementById("agree");
+			if (a.checked) {
+				document.getElementsByClassName("section1")[0].style.display="none";
+				document.getElementsByClassName("section2")[0].style.display="block";
+			}else{
+				alert("Please agree the terms and conditions for further operation!");
+				document.getElementById("div").style.background="#f59ac3";
+			}
+		}
+
+		document.getElementById("pre").addEventListener("click",pre);
+		document.getElementById("next").addEventListener("click",next);
+
+        
+			var a=0;
+			var points=0;
+
+			var b=document.querySelectorAll("form label");
+			var c=document.querySelectorAll("form input");
+			
+		function pre() {
+			sessionStorage.setItem("decrement",a=a-1);
+			for(i=0;i<questionList.length;i++){
+				document.getElementById("ques").innerHTML=questionList[sessionStorage.getItem("decrement")].que;
+
+				b[0].innerHTML=questionList[sessionStorage.getItem("decrement")].options[0];
+				b[1].innerHTML=questionList[sessionStorage.getItem("decrement")].options[1];
+				b[2].innerHTML=questionList[sessionStorage.getItem("decrement")].options[2];
+				b[3].innerHTML=questionList[sessionStorage.getItem("decrement")].options[3];
+			}
+		}
+		function next() {
+			sessionStorage.setItem("increment",a=a+1);
+			for(i=0;i<=questionList.length;i++){
+				document.getElementById("ques").innerHTML=questionList[sessionStorage.getItem("increment")].que;
+
+				b[0].innerHTML=questionList[sessionStorage.getItem("increment")].options[0];
+				b[1].innerHTML=questionList[sessionStorage.getItem("increment")].options[1];
+				b[2].innerHTML=questionList[sessionStorage.getItem("increment")].options[2];
+				b[3].innerHTML=questionList[sessionStorage.getItem("increment")].options[3];
+
+				c[0].value=questionList[sessionStorage.getItem("increment")-1].options[0];
+				c[1].value=questionList[sessionStorage.getItem("increment")-1].options[1];
+				c[2].value=questionList[sessionStorage.getItem("increment")-1].options[2];
+				c[3].value=questionList[sessionStorage.getItem("increment")-1].options[3];
+			}
+
+			var value=document.querySelector('input[type="radio"]:checked').value;
+			var ans=questionList[sessionStorage.getItem("increment")-1].ans;
+
+			var ansPara=document.getElementById("ansPara");
+
+			sessionStorage.setItem("userAnswer",value);
+			
+			if (value==ans) {
+				points=points+1
+				sessionStorage.setItem("totalPoints",points);
+				ansPara.innerHTML="Perfect, answer is right!";
+			}else{
+				ansPara.innerHTML="Oops, answer is wrong!";
+			}
+			document.querySelectorAll("form input")[0].checked=false;
+			document.querySelectorAll("form input")[1].checked=false;
+			document.querySelectorAll("form input")[2].checked=false;
+			document.querySelectorAll("form input")[3].checked=false;
+
+			const correct=document.getElementById("correct");
+			const wrong=document.getElementById("wrong");
+			const totalQues=document.getElementById("totalQuestions");
+			const result=document.getElementById("result");
+			const per=document.getElementById("percentage");
+
+			correct.innerHTML=sessionStorage.getItem("totalPoints");
+			wrong.innerHTML=Math.abs(parseInt(correct.innerHTML)-(questionList.length-1));
+			totalQues.innerHTML=questionList.length-1;
+
+			per.innerHTML="Your Result is : " + Math.round(20/100*parseInt(correct.innerHTML)*25)+"%";
+
+
+		if (points<=6) {
+			result.innerHTML="Oppss !! You need Serious Improvement";
+		}
+		else if(points<=14) {
+			result.innerHTML="Good !! You are a average quizzer";
+		}
+		else{
+			result.innerHTML="Excellent Job !! You are doing Great";
+		}
+
+		if (questionList.length==questionList[a].queno) {
+			document.getElementsByClassName("lastSection")[0].style.display="block";
+			document.getElementsByClassName("section2")[0].style.display="none";
+		}
+	}
+
+	</script>
+
+</body>
+</html>

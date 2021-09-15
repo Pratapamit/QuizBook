@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alpha Quiz System</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		img{
+			width: 6%;
+			height: auto;
+			margin-top: 2%;
+			margin-left: 6%;
+		}
+		.hedding{
+			text-align: center;
+			margin-top: -3.7%;
+			font-size: 2vw;
+		}
+		hr{
+			position: relative;
+			top: 30px;
+		}
+		section{
+			border: 1px solid black;
+			width: 35%;
+			height: auto;
+			margin-left: 33%;
+			margin-top: 80px;
+		}
+		section>h2{
+			margin: 0;	
+			background-color:#425ced ;	
+			font-size: 1vw;	
+			color: white;
+			padding: 10px;
+		}
+		form>:not(h2){
+			width: 93%;
+			padding: 8px;
+			margin: 10px 15px;	
+			font-size: 0.8vw;		
+		}
+		form>input:last-child{
+			background-color: #3aad34;
+			color: white;
+		}
+		form>input:last-child:hover{
+			background-color: #308f2b;
+			color: white;
+		}
+
+		@media only screen and (orientation:portrait){
+			img{
+			width: 10%;
+			height: auto;
+		}
+		.hedding{
+			font-size: 3.5vw;
+			margin-top: -6.5%;
+		}
+		section{
+			width: 70%;
+			height: auto;
+			margin-left: 15%;
+		}
+		section>h2{
+			font-size: 2vw;	
+		}
+		form>:not(h2){
+			font-size: 1.6vw;		
+		}
+		}
+	</style>
+</head>
+<body>
+<a href="index.html"><img src="Images/scholar.jpg"></a>
+	<h1 class="hedding">Alpha Quiz System</h1><hr>
+
+	<section>
+		<h2>User Login</h2>
+		<form name="form">
+		<input type="text" name="" value="admin" id="loginName" placeholder="username is admin"><br>
+		<input type="password" name="" value="admin" id="loginPassword" placeholder="password is admin"><br>
+		<input type="button" name="" value="Submit" id="submit">
+		</form>
+	</section>
+
+	<script>
+		
+		var submit=document.getElementById("submit").addEventListener("click",submit);
+
+		function submit(){
+			var name=document.forms["form"]["loginName"].value;
+			var password=document.forms["form"]["loginPassword"].value;
+
+				if (name==password) {
+					alert("Login successfully!");
+					location.href=("questionPage.html");
+				}else{
+					alert("Login failed! \n please login with correct username and password!");
+					document.getElementById("submit").style.background="red";
+				}
+			}
+	</script>
+
+</body>
+</html>
